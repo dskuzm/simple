@@ -1,0 +1,112 @@
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+    }
+    .logo {
+        z-index: 999;
+        h1 {
+            a {
+                color: #44c0c2;
+            }
+        }
+    }
+    .burger-icon {
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 16px;
+        cursor: pointer;
+        display: none;
+        z-index: 99999;
+        .stripe1,
+        .stripe2,
+        .stripe3 {
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            transition: all 0.3s ease-out;
+            outline: none;
+            background: $blue;
+        }
+        .stripe1 {
+            top: 0
+        }
+        .stripe2 {
+            top: 7px
+        }
+        .stripe3 {
+            top: 14px
+        }
+    }
+    nav {
+        height: 100%;
+        ul {
+            height: 100%;
+            li {
+                display: inline-flex;
+                flex-direction: row;
+                height: 100%;
+                align-items: center;
+                a {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 23px;
+                    font-size: 1.071em;
+                    color: #484c55;
+                    border-bottom: 2px solid transparent;
+                    box-sizing: border-box;
+                    transition: 0.3ms ease;
+                    &:hover {
+                        border-bottom: 2px solid #49cbcd;
+                        background: #f8f9fb;
+                        color: $blue;
+                        transition: 0.2s ease;
+                    }
+                    &:active {
+                        background: $blue;
+                        color: $white;
+                        transition: 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-open {
+    header {
+        .burger-icon {
+            .stripe1,
+            .stripe3 {
+                top: 7px;
+                height: 3px;
+                background: $blue;
+                transition: 0.3s ease-in
+            }
+            .stripe1 {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg)
+            }
+            .stripe2 {
+                transition: all .4s ease;
+                -webkit-transform: scale(0);
+                transform: scale(0)
+            }
+            .stripe3 {
+                -webkit-transform: rotate(-135deg);
+                transform: rotate(-135deg)
+            }
+        }
+        nav {
+            transition: 0.3s ease;
+            left: 0;
+        }
+    }
+}

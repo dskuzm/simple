@@ -2,13 +2,14 @@ html {
     font-family: $font-default;
     box-sizing: border-box;
     height: 100%;
+//    width: 1440px;
 }
 
 body {
     margin: 0;
     height: 100%;
     font-family: $font-default;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     color: $textPrimary;
     background: $white;
@@ -125,12 +126,8 @@ h6 {
 }
 
 h1 {
-    text-transform: uppercase;
-    margin-bottom: 0;
-    font-family: 'Oranienbaum-Regular';
-    font-size: 3.625em;
+    font-family: 'Lobster1.4';
+    font-size: 3.071em;
     font-weight: 100;
-    letter-spacing: 0.22em;
-    white-space: pre;
-    margin-bottom: 88px;
+    color: $blue;
 }
