@@ -1,0 +1,354 @@
+@media (max-width: 1600px) {
+    .container {
+        padding: 0 15px 0 100px;
+    }
+}
+
+@media (max-width: 1440px) {
+    body {
+        font-size: 15px;
+    }
+    .nav {
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    //hero
+    .hero {
+        background-size: cover;
+        background-position: center;
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            padding: 0 0 0 100px;
+            background: rgba(255, 255, 255, 0.3);
+            max-width: none;
+        }
+    }
+    //    about
+    .about {
+        padding: 100px 0 0;
+        box-sizing: border-box;
+        .container {}
+    }
+    //services
+    .services {
+        margin-bottom: 110px;
+        &-items {
+            flex-wrap: wrap;
+            .item {
+                width: 50%;
+                padding: 30px 20px;
+            }
+        }
+    }
+    //reviews
+    .reviews {
+        .slider-item {
+            &-coment {
+                max-width: 85%;
+            }
+        }
+    }
+    //masters
+    .masters {
+        .container {
+            .masters-items {
+                flex-wrap: wrap;
+                justify-content: space-around;
+                .item {
+                    margin: 0 10px 68px;
+                }
+            }
+        }
+    }
+    //brands
+    .brands {
+        &-items {
+            .brand-item {
+                max-height: 150px;
+                padding: 10px;
+            }
+        }
+    }
+    //footer
+    .footer {
+        &-contacts {
+            input[type='email'] {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    //nav
+    .nav {
+        ul {
+            li {
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                margin-bottom: 15px;
+                &:nth-child(1),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:nth-child(6) {
+                    text-align: center;
+                    padding: 0;
+                }
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    //hero
+    .hero {
+        .container {
+            justify-content: center;
+            padding: 0;
+        }
+    }
+    //about
+    .about {
+        .container {
+            justify-content: space-around;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+        &-text {
+            max-width: none;
+            padding: 0;
+            button {
+                float: right;
+            }
+        }
+        &-image {
+            max-width: 55%;
+        }
+    }
+    //reviews
+    .reviews {
+        .slider-item {
+            &-coment {
+                max-width: 85%;
+            }
+        }
+    }
+    //brands
+    .brands {
+        &-items {
+            .brand-item {
+                max-height: 100px;
+            }
+        }
+    }
+    //footer
+    .footer {
+        flex-direction: column;
+        padding: 0 15px 60px 100px;
+        &-item {
+            width: 100%;
+            justify-content: center;
+        }
+        &-contacts {
+            padding: 50px 0 0;
+            max-width: none;
+            text-align: center;
+            margin-bottom: 25px;
+            p {
+                margin: 0 auto 96px;
+            }
+            input[type='email'] {
+                max-width: 290px;
+                margin: 0 auto 55px;
+            }
+            label {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+    .container {
+        padding: 0 15px 0 60px;
+    }
+    h1 {
+        font-size: 2.154em;
+        margin-bottom: 30px;
+    }
+    //sidebar
+    .sidebar {
+        width: 45px;
+        .burger-icon {
+            left: 4px;
+        }
+    }
+    .no-scroll .nav .burger-icon {
+        top: 10px;
+        right: 15px;
+        width: 44px;
+        height: 38px;
+    }
+    //nav
+    .nav {
+        padding-top: 100px;
+        ul {
+            li {
+                a {
+                    font-size: 2.154em;
+                }
+            }
+        }
+    }
+    .nav-open {
+        .burger-icon {
+            top: 30px;
+        }
+    }
+    //hero
+    .hero {
+        .container {
+            padding: 0 0 0 40px;
+        }
+        &-item {
+            max-width: 90%;
+            position: static;
+            &:after {
+                bottom: 18px;
+                left: 50%;
+                margin-left: -14px;
+            }
+            a {
+                bottom: 10px;
+                left: 50%;
+            }
+        }
+    }
+    //services
+    .services {
+        padding-left: 45px;
+        &-items {
+            .item {
+                width: 100%;
+            }
+        }
+    }
+    //    brands
+    .brands {
+        &-items {
+            .brand-item {
+                max-height: 60px;
+            }
+        }
+    }
+    //footer
+    .footer {
+        padding: 0 15px 60px 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    //hero
+    .hero-item {
+        position: static;
+        &:after {
+            bottom: 18px;
+            left: 50%;
+            margin-left: -14px;
+        }
+    }
+    //about
+    .about {
+        &-text {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+            .title {
+                margin: 0;
+            }
+            .about-description {
+                margin: 0;
+            }
+            button {
+                float: right;
+            }
+        }
+        &-image {
+            display: none;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-height: 567px) {
+    //sidebar
+    .sidebar {
+        .sidebar-social {
+            li {
+                margin: 0;
+            }
+        }
+        h1 {
+            top: 115px;
+        }
+    }
+    //nav
+    .nav {
+        padding-top: 20px;
+        ul {
+            li {
+                margin-bottom: 5px;
+                a {
+                    font-size: 1.154em;
+                }
+            }
+        }
+    }
+    //about
+    .about {
+        padding: 0;
+        &-text {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: space-around;
+            .title {
+                margin: 0;
+            }
+            .about-description {
+                margin: 0;
+                text-align: center;
+            }
+        }
+        &-image {
+            display: none;
+        }
+    }
+    //reviews
+    .reviews {
+        .title {
+            margin-bottom: 0;
+        }
+        .slick-dots {
+            bottom: 0px;
+        }
+    }
+    //footer
+    .footer {
+        .map {
+            min-height: 200px;
+        }
+    }
+}
