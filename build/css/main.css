@@ -517,13 +517,18 @@ header nav ul li a:active {
 .hero {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
   padding-top: 100px;
 }
 
 .hero-slider-item {
   display: table;
-  min-height: 565px;
+  height: 565px;
+  height: 100%;
   padding: 0 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-slider-item .slider-text {
@@ -567,6 +572,63 @@ header nav ul li a:active {
 
 .hero-slider-item .slider-text button:active {
   background: rgba(0, 0, 0, .3);
+}
+
+.team {
+  padding-top: 94px;
+  text-align: center;
+}
+
+.team .title {
+  font-size: 3.000em;
+  font-weight: 100;
+  margin-bottom: 127px;
+}
+
+.team-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.team-items .team-item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 292px;
+  margin-bottom: 102px;
+  padding: 0 15px;
+}
+
+.team-items .team-item-image {
+  overflow: hidden;
+  width: 201px;
+  height: 201px;
+  margin: 0 auto 64px;
+  border-radius: 100%;
+  background: #eeeef0;
+}
+
+.team-items .team-item-title {
+  margin-bottom: 23px;
+}
+
+.team-items .team-item-title h4 {
+  font-size: 1.571em;
+  margin-bottom: 3px;
+}
+
+.team-items .team-item-description {
+  line-height: 26px;
 }
 
 @media (max-width: 768px) {
@@ -642,10 +704,6 @@ header nav ul li a:active {
     height: 100%;
   }
 
-  .hero-slider-item {
-    min-height: auto;
-  }
-
   .hero-slider-item .slider-text h2 {
     font-size: 2.500em;
     line-height: 1;
@@ -659,6 +717,24 @@ header nav ul li a:active {
   .hero-slider-item .slider-text button {
     width: 170px;
     height: 50px;
+  }
+
+  .team {
+    padding-top: 80px;
+  }
+
+  .team .title {
+    margin-bottom: 80px;
+  }
+
+  .team-items .team-item {
+    margin-bottom: 80px;
+  }
+
+  .team-items .team-item-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
   }
 }
 

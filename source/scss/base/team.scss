@@ -1,0 +1,41 @@
+.team {
+    text-align: center;
+    padding-top: 94px;
+    .title {
+        font-size: 3.000em;
+        font-weight: 100;
+        margin-bottom: 127px;
+    }
+    &-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .team-item {
+            max-width: 292px;
+            width: 100%;
+            padding: 0px 15px;
+            box-sizing: border-box;
+            margin-bottom: 102px;
+            &-image {
+                overflow: hidden;
+                height: 201px;
+                width: 201px;
+                border-radius: 100%;
+                background: #eeeef0;
+                margin: 0 auto 64px;
+            }
+            &-title {
+                margin-bottom: 23px;
+                h4 {
+                    font-size: 1.571em;
+                    margin-bottom: 3px;
+                }
+                p {}
+            }
+            &-description {
+                line-height: 26px;
+            }
+        }
+    }
+}

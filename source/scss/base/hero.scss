@@ -1,11 +1,16 @@
 .hero {
     padding-top: 100px;
     box-sizing: border-box;
+    height: 100%;
     &-slider {
         &-item {
-            min-height: 565px;
+            height: 565px;
+            height: 100%;
             display: table;
             padding: 0 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             .slider-text {
                 color: $white;
                 text-align: center;
