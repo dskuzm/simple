@@ -337,8 +337,9 @@ h1 {
 .container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .no-scroll {
@@ -347,15 +348,25 @@ h1 {
 
 button {
   width: 170px;
-  padding: 15px;
+  height: 51px;
   border: none;
 }
 
 header {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background: #fff;
+}
+
+header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100px;
+  height: 100%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -467,6 +478,10 @@ header nav ul li a:active {
   background: #49cbcd;
 }
 
+.nav-open {
+  overflow: hidden;
+}
+
 .nav-open header .burger-icon .stripe1,
 .nav-open header .burger-icon .stripe3 {
   top: 7px;
@@ -499,13 +514,66 @@ header nav ul li a:active {
   transition: .3s ease;
 }
 
-@media (max-width: 992px) {
-  .container {
-    padding: 0 15px;
-  }
+.hero {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 100px;
+}
+
+.hero-slider-item {
+  display: table;
+  min-height: 565px;
+  padding: 0 15px;
+}
+
+.hero-slider-item .slider-text {
+  display: table-cell;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.hero-slider-item .slider-text h2 {
+  font-family: 'OpenSans-Semibold';
+  font-size: 4.500em;
+  margin-bottom: 18px;
+}
+
+.hero-slider-item .slider-text p {
+  font-size: 1.643em;
+  line-height: 37px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 53px;
+}
+
+.hero-slider-item .slider-text button {
+  font-family: 'OpenSans-Semibold';
+  font-size: 1.857em;
+  width: 231px;
+  height: 69px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.hero-slider-item .slider-text button:hover {
+  background: rgba(255, 255, 255, .4);
+}
+
+.hero-slider-item .slider-text button:active {
+  background: rgba(0, 0, 0, .3);
 }
 
 @media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
   header {
     height: 70px;
   }
@@ -549,6 +617,7 @@ header nav ul li a:active {
 
   header nav ul li a {
     width: 100%;
+    text-transform: uppercase;
     border: none;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -557,5 +626,60 @@ header nav ul li a:active {
 
   header nav ul li a:hover {
     border: none;
+  }
+
+  .hero {
+    height: 100%;
+    padding-top: 70px;
+  }
+
+  .hero .slick-slider,
+  .hero .slick-track,
+  .hero .slick-list,
+  .hero .container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .hero-slider-item {
+    min-height: auto;
+  }
+
+  .hero-slider-item .slider-text h2 {
+    font-size: 2.500em;
+    line-height: 1;
+    margin-bottom: 30px;
+  }
+
+  .hero-slider-item .slider-text p {
+    line-height: 1.5;
+  }
+
+  .hero-slider-item .slider-text button {
+    width: 170px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-height: 567px) {
+  .hero-slider-item .slider-text h2 {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .hero-slider-item .slider-text p {
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .hero-slider-item .slider-text button {
+    width: 170px;
+    height: 50px;
+  }
+
+  .hero .slick-dots {
+    right: 19px;
+    text-align: right;
   }
 }

@@ -1,8 +1,17 @@
 header {
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 999;
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     a {
         text-decoration: none;
     }
@@ -81,6 +90,7 @@ header {
 }
 
 .nav-open {
+    overflow: hidden;
     header {
         .burger-icon {
             .stripe1,
@@ -88,7 +98,7 @@ header {
                 top: 7px;
                 height: 3px;
                 background: $blue;
-                transition: 0.3s ease-in
+                transition: 0.3s ease-in;
             }
             .stripe1 {
                 -webkit-transform: rotate(135deg);
@@ -97,11 +107,11 @@ header {
             .stripe2 {
                 transition: all .4s ease;
                 -webkit-transform: scale(0);
-                transform: scale(0)
+                transform: scale(0);
             }
             .stripe3 {
                 -webkit-transform: rotate(-135deg);
-                transform: rotate(-135deg)
+                transform: rotate(-135deg);
             }
         }
         nav {

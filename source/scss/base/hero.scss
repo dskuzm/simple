@@ -1,0 +1,47 @@
+.hero {
+    padding-top: 100px;
+    box-sizing: border-box;
+    &-slider {
+        &-item {
+            min-height: 565px;
+            display: table;
+            padding: 0 15px;
+            .slider-text {
+                color: $white;
+                text-align: center;
+                overflow: hidden;
+                display: table-cell;
+                vertical-align: middle;
+                h2 {
+                    font-size: 4.500em;
+                    margin-bottom: 18px;
+                    font-family: 'OpenSans-Semibold';
+                }
+                p {
+                    font-size: 1.643em;
+                    line-height: 37px;
+                    max-width: 400px;
+                    margin: 0 auto;
+                    margin-bottom: 53px;
+                }
+                button {
+                    width: 231px;
+                    border: 3px solid $white;
+                    color: $white;
+                    font-family: 'OpenSans-Semibold';
+                    font-size: 1.857em;
+                    height: 69px;
+                    background: transparent;
+                    border-radius: 6px;
+                    transition: 0.3s ease;
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.4);
+                    }
+                    &:active {
+                        background: rgba(0, 0, 0, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}

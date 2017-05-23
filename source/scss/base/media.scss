@@ -2,13 +2,13 @@
 
 @media (max-width: 1440px) {}
 
-@media (max-width: 992px) {
-    .container {
-        padding: 0 15px;
-    }
-}
+@media (max-width: 992px) {}
 
 @media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    //header
     header {
         height: 70px;
         .burger-icon {
@@ -35,9 +35,41 @@
                         width: 100%;
                         justify-content: center;
                         border: none;
+                        text-transform: uppercase;
                         &:hover {
                             border: none;
                         }
+                    }
+                }
+            }
+        }
+    }
+    //hero
+    .hero {
+        padding-top: 70px;
+        height: 100%;
+        .slick-slider,
+        .slick-track,
+        .slick-list,
+        .container {
+            height: 100%;
+            box-sizing: border-box;
+        }
+        &-slider {
+            &-item {
+                min-height: auto;
+                .slider-text {
+                    h2 {
+                        font-size: 2.500em;
+                        margin-bottom: 30px;
+                        line-height: 1;
+                    }
+                    p {
+                        line-height: 1.5;
+                    }
+                    button {
+                        width: 170px;
+                        height: 50px;
                     }
                 }
             }
@@ -47,4 +79,29 @@
 
 @media screen and (max-width: 480px) {}
 
-@media screen and (max-height: 567px) {}
+@media screen and (max-height: 567px) {
+    .hero {
+        &-slider {
+            &-item {
+                .slider-text {
+                    h2 {
+                        margin-bottom: 10px;
+                        line-height: 1;
+                    }
+                    p {
+                        line-height: 1.2;
+                        margin-bottom: 25px;
+                    }
+                    button {
+                        width: 170px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+        .slick-dots {
+            text-align: right;
+            right: 19px;
+        }
+    }
+}
