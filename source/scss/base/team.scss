@@ -16,7 +16,7 @@
             width: 100%;
             padding: 0px 15px;
             box-sizing: border-box;
-            margin-bottom: 102px;
+            margin-bottom: 103px;
             &-image {
                 overflow: hidden;
                 height: 201px;
@@ -24,10 +24,50 @@
                 border-radius: 100%;
                 background: #eeeef0;
                 margin: 0 auto 64px;
+                position: relative;
+                cursor: pointer;
+                .plus {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: scale(0);
+                    transition: 0.3s ease;
+                    &-stipe1 {
+                        top: 50%;
+                        left: 50%;
+                        margin-left: -20px;
+                        margin-top: -6px;
+                        width: 41px;
+                        height: 12px;
+                        background: #f46d6d;
+                        position: absolute;
+                        transform: rotate(90deg);
+                        transition: 0.3s ease;
+                    }
+                    &-stipe2 {
+                        top: 50%;
+                        left: 50%;
+                        margin-left: -20px;
+                        margin-top: -6px;
+                        height: 12px;
+                        width: 41px;
+                        position: absolute;
+                        background: #f46d6d;
+                        transition: 0.3s ease;
+                    }
+                }
+                &:hover {
+                    .plus {
+                        transform: scale(1);
+                        transition: 0.3s ease;
+                    }
+                }
             }
             &-title {
                 margin-bottom: 23px;
-                h4 {
+                h5 {
                     font-size: 1.571em;
                     margin-bottom: 3px;
                 }

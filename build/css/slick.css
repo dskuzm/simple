@@ -112,12 +112,16 @@
     width: 51px;
     border-radius: 100%;
     background: #fefefe;
+
+    transition: 0.3s;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
     opacity: 0.8;
     outline: none;
+
+    transition: 0.3s;
 }
 
 .slick-prev:focus,
@@ -160,9 +164,10 @@
 }
 
 .slick-prev:before {
-    content: "\f053";
-    font-size: 18px;
+    content: "\f104";
+    font-size: 50px;
     color: #49cbcd;
+    display: block;
 }
 
 .slick-next {
@@ -170,9 +175,10 @@
 }
 
 .slick-next:before {
-    content: "\f054";
-    font-size: 18px;
+    content: "\f105";
+    font-size: 50px;
     color: #49cbcd;
+    display: block;
 }
 
 .slick-dotted.slick-slider {
@@ -219,4 +225,5 @@
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
     opacity: 1;
+    transition: 0.3s;
 }
