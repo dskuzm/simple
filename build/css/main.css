@@ -152,18 +152,18 @@
 }
 
 @font-face {
-  font-family: 'MyriadPro-Regular';
+  font-family: 'Myriad Pro Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/MyriadProRegular/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadProRegular/MyriadPro-Regular.ttf') format('truetype');
+  src: url('../fonts/MyriadProRegular/Myriad Pro Regular.eot');
+  src: url('../fonts/MyriadProRegular/Myriad Pro Regular.woff2') format('woff2'), url('../fonts/MyriadProRegular/Myriad Pro Regular.eot?#iefix') format('embedded-opentype');
 }
 
 @font-face {
   font-family: 'MyriadPro-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/MyriadProRegular/MyriadProRegular.eot');
-  src: url('../fonts/MyriadProRegular/MyriadProRegular.woff2') format('woff2'), url('../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/MyriadProRegular/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadProRegular/MyriadPro-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -200,12 +200,8 @@
   font-family: 'FontAwesome';
   font-weight: normal;
   font-style: normal;
-  src: url('../fonts/fontawesome/fontawesome-webfont.eot');
-  src: url('../fonts/fontawesome/fontawesome-webfont.eot') format('embedded-opentype');
-  src: url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2');
-  src: url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff');
-  src: url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
-  src: url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('./fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
 }
 
 html {
@@ -316,7 +312,29 @@ textarea {
 }
 
 textarea {
+  font-size: 16px;
   resize: vertical;
+}
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+::-moz-placeholder {
+  font-size: 16px;
+}
+
+/* Firefox 19+ */
+
+:-moz-placeholder {
+  font-size: 16px;
+}
+
+/* Firefox 18- */
+
+:-ms-input-placeholder {
+  font-family: 'MyriadPro-Regular';
+  font-size: 16px;
 }
 
 fieldset {
@@ -360,6 +378,8 @@ button {
   height: 40px;
   border: none;
 }
+
+/*---header---*/
 
 header {
   position: absolute;
@@ -495,7 +515,7 @@ header nav ul li a:active {
   -webkit-transition: .3s ease;
   transition: .3s ease;
   border-bottom: 1px solid #f1f1f1;
-  background: rgba(255, 255, 255, .9);
+  background: #fff;
 }
 
 .nav-open {
@@ -534,6 +554,8 @@ header nav ul li a:active {
   transition: .3s ease;
 }
 
+/*---hero----*/
+
 .hero {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -542,20 +564,26 @@ header nav ul li a:active {
 }
 
 .hero-slider-item {
-  display: table;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 565px;
   height: 100%;
   padding: 0 15px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .hero-slider-item .slider-text {
-  display: table-cell;
   overflow: hidden;
   text-align: center;
-  vertical-align: middle;
   color: #fff;
 }
 
@@ -593,6 +621,8 @@ header nav ul li a:active {
 .hero-slider-item .slider-text button:active {
   background: rgba(0, 0, 0, .3);
 }
+
+/*---team---*/
 
 .team {
   padding-top: 94px;
@@ -700,6 +730,8 @@ header nav ul li a:active {
   line-height: 26px;
 }
 
+/*---service---*/
+
 .service {
   padding-top: 118px;
   background: #f1f1f1;
@@ -789,10 +821,223 @@ header nav ul li a:active {
   background: #485460;
 }
 
+/*---footer---*/
+
+footer {
+  padding-top: 89px;
+  padding-bottom: 100px;
+  background: url(../img/footer-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+footer .container:after,
+footer .container:before {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+footer .title {
+  font-size: 3.000em;
+  margin-bottom: 105px;
+  text-align: center;
+  color: #fff;
+}
+
+footer .footer-info {
+  display: inline-block;
+  max-width: 431px;
+  color: #fff;
+}
+
+footer .footer-info-title {
+  font-size: 1.500em;
+  margin-bottom: 7px;
+}
+
+footer .footer-info-text {
+  line-height: 21px;
+  margin-bottom: 38px;
+}
+
+footer .footer-info .footer-social {
+  margin-bottom: 15px;
+}
+
+footer .footer-info .footer-social li {
+  line-height: 42px;
+  display: inline-block;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  margin-right: 11px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+footer .footer-info .footer-social li a {
+  display: block;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+  color: #fff;
+}
+
+footer .footer-info .footer-social li a:hover {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  opacity: .7;
+}
+
+footer .footer-info .footer-social li a:active {
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  opacity: .3;
+}
+
+footer .footer-info .footer-social .fb {
+  background-color: #3b5997;
+}
+
+footer .footer-info .footer-social .tw {
+  background-color: #3ec2f3;
+}
+
+footer .footer-info .footer-social .ggl {
+  background-color: #e44c41;
+}
+
+footer .footer-info .footer-contacts {
+  color: #bface2;
+}
+
+footer .footer-info .footer-contacts li:first-child {
+  font-family: 'MyriadPro-Regular';
+  margin-bottom: 5px;
+}
+
+footer .footer-info .footer-contacts li a {
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #bface2;
+}
+
+footer .footer-info .footer-contacts li a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-info .footer-contacts li a:active {
+  color: #485460;
+}
+
+footer .footer-form {
+  float: right;
+  width: 100%;
+  max-width: 570px;
+}
+
+footer .footer-form form:after,
+footer .footer-form form:before {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+footer .footer-form input[type='text'],
+footer .footer-form input[type='email'],
+footer .footer-form textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 19px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+footer .footer-form input[type='text']:focus,
+footer .footer-form input[type='email']:focus,
+footer .footer-form textarea:focus {
+  border: 1px solid #49cbcd;
+}
+
+footer .footer-form input[type='text'],
+footer .footer-form input[type='email'] {
+  width: 100%;
+  max-width: 270px;
+  height: 44px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+footer .footer-form input[type='text'] {
+  float: left;
+}
+
+footer .footer-form input[type='email'] {
+  float: right;
+}
+
+footer .footer-form textarea {
+  width: 100%;
+  max-width: 570px;
+  min-height: 180px;
+  margin-bottom: 25px;
+  padding-top: 16px;
+  resize: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+footer .footer-form input[type='submit'] {
+  font-size: 1.375em;
+  float: right;
+  width: 170px;
+  height: 51px;
+  cursor: pointer;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: #49cbcd;
+}
+
+footer .footer-form input[type='submit']:hover {
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  opacity: .9;
+}
+
+footer .footer-form input[type='submit']:active {
+  -webkit-transition: .3s ease-in;
+  transition: .3s ease-in;
+  background: #485460;
+}
+
+/*---media---*/
+
 @media (max-width: 1200px) {
   .service .services-items {
     -ms-flex-pack: distribute;
     justify-content: space-around;
+  }
+
+  footer .footer-info {
+    display: block;
+    width: 100%;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  footer .footer-form {
+    float: none;
+    margin: 0 auto;
+  }
+
+  footer .footer-form input[type='submit'] {
+    display: block;
+    float: none;
+    margin: 0 auto;
   }
 }
 
@@ -900,6 +1145,16 @@ header nav ul li a:active {
     width: 150px;
     height: 150px;
     margin: 0 auto 20px;
+  }
+
+  footer .title {
+    margin-bottom: 80px;
+  }
+
+  footer .footer-form input[type='text'],
+  footer .footer-form input[type='email'] {
+    display: block;
+    max-width: none;
   }
 }
 

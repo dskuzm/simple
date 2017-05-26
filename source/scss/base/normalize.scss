@@ -2,7 +2,6 @@ html {
     font-family: $font-default;
     box-sizing: border-box;
     height: 100%;
-//            width: 1440px;
 }
 
 body {
@@ -106,6 +105,30 @@ textarea {
 
 textarea {
     resize: vertical;
+    font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
+::-moz-placeholder {
+    font-size: 16px;
+}
+
+
+/* Firefox 19+ */
+
+:-moz-placeholder {
+    font-size: 16px;
+}
+
+
+/* Firefox 18- */
+
+:-ms-input-placeholder {
+    font-family: 'MyriadPro-Regular';
+    font-size: 16px;
 }
 
 fieldset {

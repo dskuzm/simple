@@ -28,11 +28,11 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Service</a></li>
+                    <li><a href="#service">Service</a></li>
                     <li><a href="#">Portfolio</a></li>
-                    <li><a href="#Team">Team</a></li>
+                    <li><a href="#team">Team</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -125,7 +125,7 @@
             </div>
     </section>
 <!--services-->
-    <section class="service">
+    <section id="service" class="service">
             <div class="container">
                 <div class="services-items">
                     <div class="services-item">
@@ -176,7 +176,34 @@
                 </div>
             </div>
     </section>
-
+<!--footer-->
+    <footer id="contact">
+           <div class="container">
+               <h3 class="title">Contact Us</h3>
+               <div class="footer-info">
+                   <p class="footer-info-title">Get in touch with us</p>
+                   <p class="footer-info-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                   <ul class="footer-social">
+                       <li class="fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                       <li class="tw"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                       <li class="ggl"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                   </ul>
+                   <ul class="footer-contacts">
+                       <li>Posted by Dospel & GanjaParker</li>
+                       <li><a href="tel:+XXXXXXXXXXXX">+XX-XXXX - XXXX - XX</a></li>
+                       <li ><a href="mailto:info@mail.com">info@mail.com</a></li>
+                   </ul>
+               </div>
+               <div class="footer-form">
+                   <form method="get">
+                       <input type="text" required pattern="^[a-zA-Z]+$" maxlength="25" placeholder="Name" >
+                       <input type="email" required placeholder="Email">
+                       <textarea required  minlength="25" placeholder="Message"></textarea>
+                       <input type="submit" value="Send">
+                   </form>
+               </div>
+           </div>
+    </footer>
 
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>

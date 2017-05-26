@@ -3,9 +3,28 @@
 @media (max-width: 1440px) {}
 
 @media (max-width: 1200px) {
+//service
     .service {
         .services-items {
             justify-content: space-around;
+        }
+    }
+//footer
+    footer {
+        .footer-info {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto 80px;
+            display: block;
+        }
+        .footer-form {
+            margin: 0 auto;
+            float: none;
+            input[type="submit"] {
+                float: none;
+                margin: 0 auto;
+                display: block;
+            }
         }
     }
 }
@@ -101,6 +120,19 @@
                     p {}
                 }
                 &-description {}
+            }
+        }
+    }
+    //footer
+    footer {
+        .title {
+            margin-bottom: 80px;
+        }
+        .footer-form {
+            input[type='text'],
+            input[type='email'] {
+                display: block;
+                max-width: none;
             }
         }
     }

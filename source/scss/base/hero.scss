@@ -6,17 +6,17 @@
         &-item {
             height: 565px;
             height: 100%;
-            display: table;
             padding: 0 15px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .slider-text {
                 color: $white;
                 text-align: center;
                 overflow: hidden;
-                display: table-cell;
-                vertical-align: middle;
                 h2 {
                     font-size: 4.500em;
                     margin-bottom: 18px;
